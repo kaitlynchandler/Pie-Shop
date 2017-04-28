@@ -70,12 +70,12 @@ public class PieShop{
              throw new IllegalArgumentException (parts[1] + "is not valid input.");
          }  
          }
-         //System.out.print("Pop's Pie Shop" + date);
-      //System.out.println(item);
      
    }
        Menu menu = new Menu(savory, sweetTreat, sweetPie, date);
-       
+       System.out.println("Pop's Pie Shop for:" + " " + date);
+       System.out.println("");
+       printMenu(menu, in);
        
  //loops until false or close program is chosen      
        boolean keepGoing = true;
@@ -162,8 +162,7 @@ private static void saveMenu(Menu menu, Scanner in){
          break;
      }
      
-     //System.out.println(currentAvailItemsItem.getNames() + currentAvailItemsItem.getCategory() + currentAvailItemsItem.getAvail() 
-                        // + currentAvailItemsItem.getDietType());
+    
   }
    for (int j=0; j< savory.size(); j++){
      FoodItem currentItem = savory.get(j);
@@ -257,11 +256,10 @@ public static void editSweetPie(Menu menu, Scanner in){
 }
 }
  
-/**private static void printMenu(Menu menu, Scanner in){
+private static void printMenu(Menu menu, Scanner in){
 
   
-  //try{
-    //PrintWriter writer = new PrintWriter("menu.txt", "UTF-8");
+  
     List <FoodItem> AvailbleItems = menu.getAvailItems();
       List<FoodItem> savory= new ArrayList<FoodItem>();
       List<FoodItem> sweetTreat= new ArrayList<FoodItem>();
@@ -280,8 +278,7 @@ public static void editSweetPie(Menu menu, Scanner in){
          break;
      }
      
-     //System.out.println(currentAvailItemsItem.getNames() + currentAvailItemsItem.getCategory() + currentAvailItemsItem.getAvail() 
-                        // + currentAvailItemsItem.getDietType());
+    
   }
    for (int j=0; j< savory.size(); j++){
      FoodItem currentItem = savory.get(j);
@@ -304,14 +301,9 @@ public static void editSweetPie(Menu menu, Scanner in){
      }
      System.out.println(currentItem.getNames() + " " + currentItem.getDietType());
 }
-  // writer.close();
+ 
   }
-  // catches any errors
-  //catch(IOException e){
-    //System.out.println("yikes");
-
-//}**/
-
+  
 
 //Print Heading Method
   private static void printHeading(int projectNumber, String projectName){
